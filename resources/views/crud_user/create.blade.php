@@ -45,6 +45,13 @@
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
+                                <div class="form-group mb-3">
+                                    <input type="file" placeholder="Avatar" id="Avartar" class="form-control"
+                                           name="avartar" required>
+                                    @if ($errors->has('avartar'))
+                                        <span class="text-danger">{{ $errors->first('avartar') }}</span>
+                                    @endif
+                                </div>
                                 <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Submit</button>
                                 </div>

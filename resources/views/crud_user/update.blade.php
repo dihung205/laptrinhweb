@@ -8,15 +8,33 @@
                     <div class="card">
                         <h3 class="card-header text-center">Update User</h3>
                         <div class="card-body">
-                            <form action="{{ route('user.postUpdateUser') }}" method="POST">
+                            <form action="{{ route('user.postUpdateUser') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <input name="id" type="hidden" value="{{$user->id}}">
+                                
+                                <!-- Existing fields -->
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Name" id="name" class="form-control" name="name"
                                            value="{{ $user->name }}"
                                            required autofocus>
                                     @if ($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Age" id="age" class="form-control" name="age"
+                                           value="{{ $user->age }}"
+                                           required autofocus>
+                                    @if ($errors->has('age'))
+                                        <span class="text-danger">{{ $errors->first('age') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Like" id="like" class="form-control" name="like"
+                                           value="{{ $user->like }}"
+                                           required autofocus>
+                                    @if ($errors->has('like'))
+                                        <span class="text-danger">{{ $errors->first('like') }}</span>
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
@@ -33,6 +51,15 @@
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="file" placeholder="img" id="img" class="form-control"
+                                        name="image" required>
+                                    @if ($errors->has('image'))
+                                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                                    @endif
+                                </div>
+                </td>
                                 </div>
 
                                 <div class="d-grid mx-auto">

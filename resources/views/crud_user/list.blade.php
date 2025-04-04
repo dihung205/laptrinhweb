@@ -8,9 +8,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
+                            <th>Tên</th>
                             <th>Email</th>
-                            <th>Action</th>
+                            <th>Hành động</th>
+                            <th>Avatar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,9 +21,16 @@
                                 <th>{{ $user->name }}</th>
                                 <th>{{ $user->email }}</th>
                                 <th>
-                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">Xem</a> |
+                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Sửa</a> |
+                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Xóa</a>
+                                </th>
+                                <th>
+                                    @if($user->avartar)
+                                        <img src="{{ asset('storage/avatars/' . $user->avartar) }}" alt="Avatar của {{ $user->name }}" width="50" height="50">
+                                    @else
+                                        <span>Không có avatar</span>
+                                    @endif
                                 </th>
                             </tr>
                         @endforeach

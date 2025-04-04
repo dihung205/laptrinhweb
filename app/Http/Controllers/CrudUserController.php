@@ -60,16 +60,23 @@ class CrudUserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
-
+        
         $data = $request->all();
         $check = User::create([
             'name' => $data['name'],
             'age' => $data['age'],
             'like' => $data['like'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password'])
+            'password' => Hash::make($data['password']),
+            'avartar' => $data['avartar']
         ]);
-
+        // Xử lý ảnh đơn giản, không kiểm tra
+        if ($request->hasFile('avartar')) {
+            $image = $request->file('avartar');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/img'), $imageName);
+            $data['avartar'] = 'uploads/img/' . $imageName;
+        }
         return redirect("login");
     }
 
@@ -125,6 +132,7 @@ class CrudUserController extends Controller
         $user->like = $input['age'];
         $user->email = $input['email'];
         $user->password = $input['password'];
+        $user->avartar = $input['avartar'];
         $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');
