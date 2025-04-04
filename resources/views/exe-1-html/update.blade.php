@@ -32,8 +32,6 @@ header,
                                     <p style="margin-top:20px">User name</p>
                                     <p style="margin-top:35px">Email</p>
                                     <p style="margin-top:28px">Nhập lại mặt khẩu</p>
-                                    <p style="margin-top:30px">SDT</p>
-                                    <p style="margin-top:30px">MSSV</p>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group mb-3">

@@ -58,40 +58,8 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Phone -->
-                                <div class="form-group mb-2">
-                                    <div class="row text-center">
-                                        <div class="col-md-4" style="">Phone</div>
-                                        <div class="col-md-8" style="text-align: left;">
-                                            <input type="text" id="phone" style="border: solid 1px; width: 215px;" name="phone" required>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- mssv -->
-                                <div class="form-group mb-2">
-                                    <div class="row text-center">
-                                        <div class="col-md-4" style="">MSSV</div>
-                                        <div class="col-md-8" style="text-align: left;">
-                                            <input type="text" id="mssv" style="border: solid 1px; width: 215px;" name="mssv" required>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
-                                <!-- Hinh anh -->
-                                <div class="row mb-3">
-                                    <label for="avatar"  style=" padding-right: 50px;"class="col-md-4 col-form-label text-md-end"></label>
-                                    
-                                    <div class="col-md-6">
-                                        <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}" required autocomplete="avatar">
-                                        
-                                        
-                                    </div>
-                                    
-                                  
-                                </div>
+                               
+                        
                                 
                                 <!-- Button -->
                                 <div class="row">

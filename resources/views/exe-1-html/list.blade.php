@@ -51,10 +51,6 @@
                         <th>#</th>
                         <th>Username</th>
                         <th>Email</th>
-                        <th>Phone</th>
-                        <th>MSSV</th>
-                        <th>Avatar</th>
-
                         <th>Thao tác</th>
                     </tr>
                 </thead>
@@ -63,63 +59,11 @@
                         <th style="text-align: center">1</th>
                         <th>buiduyhung</th>
                         <th>dhung4th8@gmail.com</th>
-                        <th>0918314700</th>
-                        <th>23211tt4132</th>
                         <th>
-                            <img
-                                src="#"
-                                width="70px"
-                                height="70px"
-                                alt="avatar"
-                            />
-                        </th>
-                        <th>
-                            <a href="#"></a>
-                            <a href="#"></a>
+                            <a href="#">Edit </a>|
+                            <a href="#">View </a>|
 
-                            <a href="#"></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th style="text-align: center">1</th>
-                        <th>buiduyhung</th>
-                        <th>dhung4th8@gmail.com</th>
-                        <th>0918314700</th>
-                        <th>23211tt4132</th>
-                        <th>
-                            <img
-                                src="#"
-                                width="70px"
-                                height="70px"
-                                alt="avatar"
-                            />
-                        </th>
-                        <th>
-                            <a href="#"></a>
-                            <a href="#"></a>
-
-                            <a href="#"></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th style="text-align: center">1</th>
-                        <th>buiduyhung</th>
-                        <th>dhung4th8@gmail.com</th>
-                        <th>0918314700</th>
-                        <th>23211tt4132</th>
-                        <th>
-                            <img
-                                src="#"
-                                width="70px"
-                                height="70px"
-                                alt="avatar"
-                            />
-                        </th>
-                        <th>
-                            <a href="#"></a>
-                            <a href="#"></a>
-
-                            <a href="#"></a>
+                            <a href="#"> Delete</a>
                         </th>
                     </tr>
                 </tbody>
